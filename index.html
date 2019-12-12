@@ -12,22 +12,27 @@
     <!-- Font awesome CDN link -->
     <script src="https://kit.fontawesome.com/e7fa3552dc.js" crossorigin="anonymous"></script>
 
+    <!-- Typed.js library -->
+    <script src="/assets/js/typed/typed.js"></script>
+    <script type="module" src="/assets/js/typed/custom_typed.js"></script>
+
     <!-- custom CSS -->
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/indexPage.css">
 
-    <title>SUPIT</title>
+    <title>SUPIT - projektni zadatak</title>
 </head>
 
 <body>
 
-    <div id="index-main">
+    <div id="main-index">
+
         <div class="container-fluid">
             <!-- Navbar -->
-            <nav id="navbar" class="navbar navbar-dark navbar-expand-sm py-2 mx-auto fixed-top">
+            <nav id="navbar" class="navbar navbar-dark navbar-expand-sm py-2 fixed-top">
 
                 <!-- Logo -->
-                <a id="logo" class="navbar-brand " href="#index-main">
+                <a id="logo" class="navbar-brand px-3" href="#main-index">
                     <img src="/assets/img/Algebra-logo.png" id="algebra-logo" class="d-inline-block align-top"
                         alt="Algebra logo">
                 </a>
@@ -40,41 +45,58 @@
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul id="navbar-links" class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i id="navbar-icon" class="fas fa-home"></i> Početna
-                                stranica</a>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#"><i id="navbar-icon" class="fas fa-home"></i> Početna</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item px-2">
                             <a class="nav-link" href="#"><i id="navbar-icon" class="fas fa-comments"></i> O nama</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item px-2">
                             <a class="nav-link" href="#"><i id="navbar-icon" class="fas fa-info-circle"></i> Novosti</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item px-2">
                             <a class="nav-link" href="#"><i id="navbar-icon" class="fas fa-info-circle"></i> Nastavni
                                 plan</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item px-2">
                             <a class="nav-link" href="#"><i id="navbar-icon" class="fas fa-envelope"></i> Kontakt</a>
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-    </div>
 
-    <!-- Looping background video-->
-    <div class="container-fluid">
-        <div class="row">
+            </nav>
+
+        </div>
+
+        <!-- Looping background video with animated typed text in the middle -->
+        <div class="container-custom">
+            
             <div class="video-container">
                 <video autoplay loop muted playsinline>
                     <source src="/assets/video/typingOnlaptop.mp4" type="video/mp4" />
                 </video>
             </div>
+            
+            <div class="centered">
+                <h1><span class="typed-row"></span></h1>
+            </div>
+
         </div>
+
+        <script>
+            var first_row = new Typed('.typed-row', {
+                strings: [
+                    'Budi izvrstan u onom što vidiš!',
+                    'Budi izvrstan u onom što voliš.',
+                    'Budi izvrstan u onom što voliš. <br> <strong style="color: darkred">ZAISKRI</strong>.'
+                ],
+                startDelay: 100,
+                typeSpeed: 80,
+                autoInsertCss: true
+            });
+        </script>
+
     </div>
-
-
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
