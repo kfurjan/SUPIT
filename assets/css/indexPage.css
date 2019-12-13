@@ -5,17 +5,22 @@ body {
 /* Container holding the image and the video */
 .container-custom {
     position: relative;
+
     text-align: left;
     vertical-align: middle;
+
     color: white;
 }
 
 .video-container {
     position: relative;
+
     top: 0;
     bottom: 0;
+
     width: 100%;
     height: 100%;
+
     overflow: hidden;
 }
 
@@ -40,6 +45,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
 
     text-shadow: 2px 2px black;
@@ -47,16 +53,77 @@ body {
 
 .typed-cursor {
     opacity: 0;
+
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
     animation: blink 1s infinite;
 
     font-size: larger;
     font-weight: 900;
 }
 
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes blink {
-    0% { opacity: 0; }
-    25% { opacity: 1; }
-    50% { opacity: 0; }
-    75% { opacity: 1; }
-    100% {opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
