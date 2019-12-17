@@ -4,7 +4,7 @@
   "description": "projektni zadatak - web stranica",
   "main": "index.js",
   "scripts": {
-    "build:index": "browserify src/js/index.js -o static/js/index.js",
+    "build:index": "browserify src/js/index.js -o static/js/index.bundle.js",
     "build:jquery": "cp node_modules/jquery/dist/jquery.slim.min.js static/js/jquery/",
     "build": "npm-run-all -p build:*"
   },
