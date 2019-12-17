@@ -4,7 +4,7 @@
   "description": "projektni zadatak - web stranica",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "browserify src/js/index.js -o static/js/index.js"
   },
   "repository": {
     "type": "git",
