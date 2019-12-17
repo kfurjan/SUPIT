@@ -1,0 +1,23 @@
+{
+  "name": "supit",
+  "version": "0.1.0",
+  "description": "projektni zadatak - web stranica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kfurjan/SUPIT.git"
+  },
+  "author": "Kevin Furjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kfurjan/SUPIT/issues"
+  },
+  "homepage": "https://github.com/kfurjan/SUPIT#readme",
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "typed.js": "^2.0.11"
+  }
+}
