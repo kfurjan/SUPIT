@@ -6,7 +6,7 @@
   "scripts": {
     "build:index": "browserify src/js/index.js -o static/js/index.bundle.js",
     "build:jquery": "cp node_modules/jquery/dist/jquery.slim.min.js static/js/jquery/",
-    "build:popper": "cp node_modules/popper.js/dist/umd/popper.min.js static/js/popperjs/",
+    "build:popper": "cp node_modules/popper.js/dist/umd/popper.min.js node_modules/popper.js/dist/umd/popper.min.js.map static/js/popperjs/",
     "build": "npm-run-all -p build:*"
   },
   "repository": {
