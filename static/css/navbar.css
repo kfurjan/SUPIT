@@ -1,0 +1,20 @@
+#navbar {
+    background-color: black;
+}
+
+#algebra-logo {
+    width: 2rem;
+    height: 2rem;
+}
+
+#navbar-links > li > a{
+    color: white;
+}
+
+#navbar-links > li > a:hover{
+    color: yellow;
+}
+
+#navbar-icon {
+    color: orange;
+}
