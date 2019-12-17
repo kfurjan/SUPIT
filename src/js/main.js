@@ -1,8 +1,8 @@
 var Typed = require('typed.js')
 
 const startTypedAnimation = () => {
-    window.addEventListener('load', (event) => {
-        var first_row = new Typed('.typed-row', {
+    window.addEventListener('load', () => {
+        new Typed('.typed-row', {
             strings: [
                 'Budi izvrstan u onom što vidiš!',
                 'Budi izvrstan u onom što voliš.',
