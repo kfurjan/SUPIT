@@ -1051,13 +1051,13 @@ return /******/ (function(modules) { // webpackBootstrap
 });
 ;
 },{}],2:[function(require,module,exports){
-var {
+const {
     startTypedAnimation
 } = require('./main')
 
 document.getElementsByClassName('.typed-row').innerHTML = startTypedAnimation();
 },{"./main":3}],3:[function(require,module,exports){
-var Typed = require('typed.js')
+const Typed = require('typed.js')
 
 const startTypedAnimation = () => {
     window.addEventListener('load', () => {

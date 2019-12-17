@@ -1,4 +1,4 @@
-var Typed = require('typed.js')
+const Typed = require('typed.js')
 
 const startTypedAnimation = () => {
     window.addEventListener('load', () => {
