@@ -1,0 +1,89 @@
+#page-links > li > a{
+    color: darkorange;
+
+    -moz-animation: 1.75s ease 0s 1 slideInFromRight forwards;
+    -webkit-animation: 1.75s ease 0s 1 slideInFromRight forwards;
+    animation: 1.75s ease 0s 1 slideInFromRight forwards;
+}
+
+#page-links > li > a:hover{
+    color: yellow;
+}
+
+@-moz-keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    75% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: 5px;
+    }
+    85% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: -5px;
+    }
+    95% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: 2px;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    75% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: 5px;
+    }
+    85% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: -5px;
+    }
+    95% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: 2px;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    75% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: 5px;
+    }
+    85% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: -5px;
+    }
+    95% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-right: 2px;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
