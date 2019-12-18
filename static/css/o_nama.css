@@ -1,9 +1,9 @@
 #page-links > li > a{
-    color: darkorange;
+    color: #FFA500;
 
-    -moz-animation: 1.75s ease 0s 1 slideInFromRight forwards;
-    -webkit-animation: 1.75s ease 0s 1 slideInFromRight forwards;
-    animation: 1.75s ease 0s 1 slideInFromRight forwards;
+    -moz-animation: 1s ease-in 0.75s 1 slideInFromRight both;
+    -webkit-animation: 1s ease-in 0.75s 1 slideInFromRight both;
+    animation: 1s ease-in 0.75s 1 slideInFromRight both;
 }
 
 #page-links > li > a:hover{
