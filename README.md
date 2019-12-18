@@ -4,7 +4,7 @@ Izrada web stranice prema specifikaciji za kolegij *Standardi u primjeni interne
 
 ## Predinstalirano:
 ```
-- nodeJS
+- Node.js
 - npm package manager
 ```
 
@@ -14,5 +14,5 @@ Izrada web stranice prema specifikaciji za kolegij *Standardi u primjeni interne
 2. cd SUPIT/
 3. sudo npm install
 3. npm run build
-4. pokreni web stranicu na nekom od live servera (npr: [VS Code Live server ekstentija](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
+4. pokreni web stranicu na nekom od live servera; npr: [VS Code Live server ekstentija](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 ```
