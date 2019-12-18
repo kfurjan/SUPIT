@@ -9,7 +9,8 @@ const startTypedAnimation = () => {
                 'Budi izvrstan u onom što voliš.<br><strong style="color: darkred">ZAISKRI</strong>.'
             ],
             startDelay: 100,
-            typeSpeed: 80,
+            typeSpeed: 100,
+            backDelay: 1000,
             contentType: 'html'
         });
     });
