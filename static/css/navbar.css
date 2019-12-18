@@ -3,8 +3,8 @@
 }
 
 #algebra-logo {
-    width: 2rem;
-    height: 2rem;
+    transform: scale(0.75);
+    margin: -10px;
 }
 
 #navbar-links > li > a{
