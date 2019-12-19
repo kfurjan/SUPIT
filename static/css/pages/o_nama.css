@@ -5,6 +5,10 @@ body {
 #page-links > li > a{
     color: #FFA500;
 
+    display: inline-block;
+    min-width: 6.5em;
+    text-align: center;
+
     -moz-animation: 1s ease-in 0.75s 1 slideInFromRight both;
     -webkit-animation: 1s ease-in 0.75s 1 slideInFromRight both;
     animation: 1s ease-in 0.75s 1 slideInFromRight both;
@@ -22,17 +26,17 @@ body {
     75% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 5px;
+        margin-right: 5em;
     }
     85% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: -5px;
+        margin-right: -5em;
     }
     95% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 2px;
+        margin-right: 2em;
     }
     100% {
         transform: translateX(0);
