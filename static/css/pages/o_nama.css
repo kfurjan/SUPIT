@@ -95,3 +95,21 @@ body {
         opacity: 1;
     }
 }
+
+.kampus-img-div {
+    height: 20em; 
+    overflow: hidden;
+  }
+
+.responsive-image {
+    height: auto;
+    width: 100%;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,-30%);
+  }
+
+#nase-vrijednosti {
+    text-align: center;
+}
