@@ -2,6 +2,8 @@ body {
     padding-top: 4em;
 }
 
+/* -------------- Navbar -------------- */
+
 #page-links > li > a{
     color: #FFA500;
 
@@ -26,17 +28,17 @@ body {
     75% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 5em;
+        margin-right: 0.75em;
     }
     85% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: -5em;
+        margin-right: -0.75em;
     }
     95% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 2em;
+        margin-right: 0.25em;
     }
     100% {
         transform: translateX(0);
@@ -52,17 +54,17 @@ body {
     75% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 5px;
+        margin-right: 0.75em;
     }
     85% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: -5px;
+        margin-right: -0.75em;
     }
     95% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 2px;
+        margin-right: 0.25em;
     }
     100% {
         transform: translateX(0);
@@ -78,17 +80,17 @@ body {
     75% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 5px;
+        margin-right: 0.75em;
     }
     85% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: -5px;
+        margin-right: -0.75em;
     }
     95% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 2px;
+        margin-right: 0.25em;
     }
     100% {
         transform: translateX(0);
@@ -96,10 +98,18 @@ body {
     }
 }
 
-.kampus-img-div {
-    height: 20em; 
+/* -------------- Campus image -------------- */
+
+.img-container {
+    max-height: 20em;
+}
+
+.kampus-img-container {
+    max-height: 20em;
+
     overflow: hidden;
-  }
+    overflow: -moz-hidden-unscrollable;
+}
 
 .responsive-image {
     height: auto;
@@ -108,8 +118,29 @@ body {
     position: relative;
     left: 50%;
     transform: translate(-50%,-30%);
-  }
+}
+
+/* -------------- Nase vrijednosti section -------------- */
+
+#nase-vrijednosti-container {
+    text-align: center;
+    margin-top: 1.25em;
+}
+
+div#nase-vrijednosti-container > div > div > p {
+    border-bottom: 0.25em solid #FFA500;
+}
+
+div#nase-vrijednosti-container > div > div > h1 {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+div#nase-vrijednosti-container > div > div > h2 {
+    margin-top: 2em;
+}
 
 #nase-vrijednosti {
-    text-align: center;
+    font-weight: bold;
+    color: darkred;
 }
