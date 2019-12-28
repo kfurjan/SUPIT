@@ -1,22 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 4em;
 }
 
+
 /* -------------- Navbar -------------- */
 
-#page-links > li > a{
+#page-links > li > a {
     color: #FFA500;
-
     display: inline-block;
+    
     min-width: 6.5em;
     text-align: center;
-
+    
     -moz-animation: 1s ease-in 0.75s 1 slideInFromRight both;
     -webkit-animation: 1s ease-in 0.75s 1 slideInFromRight both;
     animation: 1s ease-in 0.75s 1 slideInFromRight both;
 }
 
-#page-links > li > a:hover{
+#page-links > li > a:hover {
     color: yellow;
 }
 
@@ -28,17 +34,17 @@ body {
     75% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 0.75em;
+        margin-right: 0.35em;
     }
     85% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: -0.75em;
+        margin-right: -0.35em;
     }
     95% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 0.25em;
+        margin-right: 0.1em;
     }
     100% {
         transform: translateX(0);
@@ -54,17 +60,17 @@ body {
     75% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 0.75em;
+        margin-right: 0.35em;
     }
     85% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: -0.75em;
+        margin-right: -0.35em;
     }
     95% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 0.25em;
+        margin-right: 0.1em;
     }
     100% {
         transform: translateX(0);
@@ -80,23 +86,24 @@ body {
     75% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 0.75em;
+        margin-right: 0.35em;
     }
     85% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: -0.75em;
+        margin-right: -0.35em;
     }
     95% {
         transform: translateX(0);
         opacity: 1;
-        margin-right: 0.25em;
+        margin-right: 0.1em;
     }
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
+
 
 /* -------------- Campus image -------------- */
 
@@ -106,7 +113,6 @@ body {
 
 .kampus-img-container {
     max-height: 20em;
-
     overflow: hidden;
     overflow: -moz-hidden-unscrollable;
 }
@@ -114,33 +120,115 @@ body {
 .responsive-image {
     height: auto;
     width: 100%;
-
     position: relative;
+    
     left: 50%;
-    transform: translate(-50%,-30%);
+    transform: translate(-50%, -30%);
 }
 
-/* -------------- Nase vrijednosti section -------------- */
 
-#nase-vrijednosti-container {
+/* -------------- O nama section -------------- */
+
+#o-nama-container {
     text-align: center;
     margin-top: 1.25em;
 }
 
-div#nase-vrijednosti-container > div > div > p {
+div#o-nama-container > div > div > p {
     border-bottom: 0.25em solid #FFA500;
 }
 
-div#nase-vrijednosti-container > div > div > h1 {
+div#o-nama-container > div > div > h1 {
     margin-bottom: 0.5em;
     font-weight: bold;
 }
 
-div#nase-vrijednosti-container > div > div > h2 {
+div#o-nama-container > div > div > h2 {
     margin-top: 2em;
 }
 
-#nase-vrijednosti {
+
+/* -------------- Nase vrijednosti section -------------- */
+
+#nase-vrijednosti > h2 {
+    margin-top: 3em;
+    
+    text-align: center;
     font-weight: bold;
     color: darkred;
+}
+
+#nase-vrijednosti > div:nth-of-type(1) {
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 2em;
+
+    background-color: #FBFBFB;
+}
+
+.cursive-text {
+    display: inline-block;
+    
+    margin-top: 4em;
+    margin-bottom: 4em;
+    
+    font-weight: 100;
+    font-size: x-large;
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-style: oblique;
+    color: gray;
+}
+
+.card {
+    width: 150%;
+}
+
+.card-text {
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+.card-title {
+    text-transform: uppercase;
+}
+
+/* -------------- Nase vrijednosti section -------------- */
+
+#povijest > h2 {
+    margin-top: 3em;
+    
+    text-align: center;
+    font-weight: bold;
+    color: darkred;
+}
+
+#povijest > div:nth-of-type(1) {
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 2em;
+
+    background-color: #FBFBFB;
+}
+
+.numbers {
+    color: darkblue;
+}
+
+/* -------------- Algebra grupa section -------------- */
+
+#algebra-grupa > h2 {
+    margin-top: 3em;
+    
+    text-align: center;
+    font-weight: bold;
+    color: darkred;
+}
+
+#algebra-grupa > div:nth-of-type(1) {
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 2em;
+
+    background-color: #FBFBFB;
 }
