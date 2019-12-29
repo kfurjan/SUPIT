@@ -1,10 +1,12 @@
 {
   "name": "supit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "projektni zadatak - web stranica",
   "main": "index.js",
   "scripts": {
     "build:index": "browserify src/js/index.js -o static/js/index.bundle.js",
+    "build:bootstrapcss": "cp node_modules/bootstrap/dist/css/bootstrap.min.css node_modules/bootstrap/dist/css/bootstrap.min.css.map static/css/bootstrap_css/",
+    "build:bootstrapjs": "cp node_modules/bootstrap/dist/js/bootstrap.min.js node_modules/bootstrap/dist/js/bootstrap.min.js.map static/js/bootstrap_js/",
     "build:jquery": "cp node_modules/jquery/dist/jquery.slim.min.js static/js/jquery/",
     "build:popper": "cp node_modules/popper.js/dist/umd/popper.min.js node_modules/popper.js/dist/umd/popper.min.js.map static/js/popperjs/",
     "build": "npm-run-all -p build:*"
