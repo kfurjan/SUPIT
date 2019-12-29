@@ -52,9 +52,11 @@
                                     class="fas fa-info-circle"></i> Nastavni plan</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link" href="#"><i id="navbar-icon" class="fas fa-envelope"></i> Kontakt</a>
+                            <a class="nav-link" href="#kontakt-form" data-toggle="modal"><i id="navbar-icon"
+                                    class="fas fa-envelope"></i> Kontakt</a>
                         </li>
                     </ul>
+
                     <!-- Page links in navbar -->
                     <ul id="page-links" class="navbar-nav ml-auto">
                         <li class="nav-item px-2 mx-auto">
@@ -72,6 +74,46 @@
                     </ul>
                 </div>
             </nav>
+        </div>
+
+        <!-- Modal input form -->
+        <div id="kontakt-form" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="fas fa-envelope text-info"></i> Kontaktrajte nas</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="POST">
+                            <div class="form-group">
+                                <label for="name">Puno ime:</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="importance">Važnost poruke:</label>
+                                <select class="form-control" id="importance">
+                                    <option>Visoka</option>
+                                    <option>Niska</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Tekst poruke:</label>
+                                <textarea class="form-control" id="message" rows="5"></textarea>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletter">
+                                <label class="form-check-label" for="newsletter">Primaj newsletter</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Pošalji</button>
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Odustani</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Responsive campus image -->
@@ -533,7 +575,7 @@
             <h2><i class="far fa-compass"></i> Kako do nas</h2>
 
             <!-- Kako do nas cards -->
-            <div class="container-fluid pb-5 parallax">
+            <div class="container-fluid pb-5 pt-5 parallax">
                 <div class="row justify-content-center">
                     <div class="col-xl-4 d-flex">
                         <div class="card mt-3">

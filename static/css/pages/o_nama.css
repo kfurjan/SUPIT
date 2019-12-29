@@ -239,6 +239,10 @@ div#o-nama-container > div > div > h2 {
       text-align: justify;
   }
 
+  .gmaps {
+      height: 25em;
+  }
+
 /* -------------- Footer section -------------- */
 
  .footer {
