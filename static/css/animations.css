@@ -179,3 +179,32 @@
         opacity: 1;
     }
 }
+
+/* -------------- Scale up animation -------------- */
+
+@-moz-keyframes scaleUp {
+    0% {
+        transform: scale(0.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes scaleUp {
+    0% {
+        transform: scale(0.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

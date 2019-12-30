@@ -71,27 +71,29 @@
                     <div class="modal-body">
                         <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="POST">
                             <div class="form-group">
-                                <label for="name">Puno ime:</label>
-                                <input type="text" class="form-control" id="name" aria-describedby="name">
+                                <label for="nameInput">Puno ime:</label>
+                                <input type="text" class="form-control" name="name" id="nameInput"
+                                    aria-describedby="name">
                             </div>
                             <div class="form-group">
-                                <label for="email">E-mail:</label>
-                                <input type="email" class="form-control" id="email" aria-describedby="email">
+                                <label for="emailInput">E-mail:</label>
+                                <input type="email" class="form-control" name="email" id="emailInput"
+                                    aria-describedby="email">
                             </div>
                             <div class="form-group">
-                                <label for="importance">Važnost poruke:</label>
-                                <select class="form-control" id="importance">
+                                <label for="importanceSelection">Važnost poruke:</label>
+                                <select class="form-control" name="importance" id="importanceSelection">
                                     <option>Visoka</option>
                                     <option>Niska</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="message">Tekst poruke:</label>
-                                <textarea class="form-control" id="message" rows="5"></textarea>
+                                <label for="messageText">Tekst poruke:</label>
+                                <textarea class="form-control" name="message" id="messageText" rows="5"></textarea>
                             </div>
                             <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="newsletter">
-                                <label class="form-check-label" for="newsletter">Primaj newsletter</label>
+                                <input type="checkbox" class="form-check-input" name="newsletter" id="newsletterOption">
+                                <label class="form-check-label" for="newsletterOption">Primaj newsletter</label>
                             </div>
                             <button type="submit" class="btn btn-primary">Pošalji</button>
                             <button type="submit" class="btn btn-danger" data-dismiss="modal">Odustani</button>
@@ -99,6 +101,45 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Novosti title with border -->
+        <div id="novosti-container" class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Novosti</h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Images -->
+        <div class="container-fluid pt-5 pb-5">
+            <div class="row justify-content-center">
+                <div class="novosti-div-circle">
+                    <div class="col-lg-2">
+                        <a href=""><img src="/static/img/novost1.jpg" alt="Novost 1" class=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-1 pt-3 pb-3"></div>
+                <div class="novosti-div-circle">
+                    <div class="col-lg-2">
+                        <a href=""><img src="/static/img/novost2.jpg" alt="Novost 2" class=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-1 pt-3 pb-3"></div>
+                <div class="novosti-div-circle">
+                    <div class="col-lg-2">
+                        <a href=""><img src="/static/img/novost3.jpg" alt="Novost 3" class=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer section -->
+        <div class="footer">
+            <h1 class="text-center pt-5">Budi izvrstan u onom što voliš</h1>
+            <h1 class="text-center pt-4">Zaiskri</h1>
         </div>
 
     </div>
