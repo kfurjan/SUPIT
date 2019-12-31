@@ -1,14 +1,15 @@
 # SUPIT
-Izrada web stranice prema specifikaciji za kolegij *Standardi u primjeni internetskih tehnologija*
+Izrada web stranice prema specifikaciji za kolegij *Standardi u primjeni internetskih tehnologija*. Web stranica se može vidjeti kroz GitHub Pages web-hosting servis ([SUPIT web stranica](https://kfurjan.github.io/SUPIT/)).
 
 
-## Predinstalirano:
+## Koraci za lokalno pokretanje (UNIX/Linux):
+
+# Predinstalirano:
 ```
 - Node.js
 - npm package manager
 ```
 
-## Koraci za lokalno pokretanje (UNIX/Linux):
 1. git clone 
 2. cd SUPIT/
 3. sudo npm install

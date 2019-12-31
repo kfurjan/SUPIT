@@ -208,7 +208,7 @@ div#o-nama-container > div > div > h1 {
 }
 
 .parallax::after {
-    background-image: url("/static/img/kakoDoNas.jpg");
+    background-image: url("../../img/kakoDoNas.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
