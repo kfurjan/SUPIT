@@ -144,6 +144,10 @@ div#novosti-container > div > div > h1 {
     border-radius: 5px;
 }
 
+.ekko-lightbox .img-fluid{
+    opacity: 1;
+}
+
 /* -------------- Footer section -------------- */
 
 .footer {
