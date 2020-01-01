@@ -25,3 +25,11 @@ div#nastavni-plan-container > div > div > h1 {
     margin-bottom: 0.5em;
     font-weight: bold;
 }
+
+/* -------------- Novosti title section -------------- */
+
+.form-animation {
+    -moz-animation: 15s ease-in-out 0s 1 slideInFromRight forwards;
+    -webkit-animation: 1s ease-in-out 0s 1 slideInFromRight forwards;
+    animation: 1s ease-in-out 0s 1 slideInFromRight forwards;
+}

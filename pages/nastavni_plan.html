@@ -117,13 +117,12 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-5">
-                    <form id="kolegijForm">
-                        <div class="form-group">
-                            <label for="nazivKolegija">Naziv kolegija:</label>
-                            <input type="text" class="form-control" id="nazivKolegija" name="kolegij">
-                        </div>
-                        <button type="submit" class="btn btn-primary add-row" value="Add row">Submit</button>
-                    </form>
+                    <div class="form-group form-animation">
+                        <label for="nazivKolegija">Naziv kolegija:</label>
+                        <input type="text" class="form-control" id="nazivKolegija" list="sviKolegiji"
+                            placeholder="Započnite unos naziva kolegija..." autofocus>
+                    </div>
+                    <datalist id="sviKolegiji"></datalist>
                 </div>
                 <div class="col-md-5">
                     <table class="table table-striped">
@@ -137,39 +136,39 @@
     </div>
 
     <!-- jQuery, Popper.js, Bootstrap JS, custom JS -->
-    <script src="../static/js/jquery/jquery.slim.min.js" type="text/javascript"></script>
+    <script src="../static/js/jquery/jquery.min.js" type="text/javascript"></script>
     <script src="../static/js/popperjs/popper.min.js" type="text/javascript"></script>
     <script src="../static/js/bootstrap_js/bootstrap.min.js" type="text/javascript"></script>
     <script>
         $(document).ready(function (e) {
             // variable declaration
             let counter = 0;
-            const table_header = 
-            `
-            <tr>
-                <th scope="col">Kolegij</th>
-                <th scope="col">ECTS</th>
-                <th scope="col">Sati</th>
-                <th scope="col">P</th>
-                <th scope="col">V</th>
-                <th scope="col">Tip</th>
-                <th scope="col"></th>
-            </tr>
-            `
 
-            const noTableRows = noTableRows => {
-                return counter == 0;
-            }
+            // fill up datalist on page load
+            $.get("http://www.fulek.com/VUA/SUPIT/GetNastavniPlan", function (kolegijiArray) {
+                kolegijiArray.forEach(element => {
+                    $('#sviKolegiji').append("<option value='" + element.label + "'>");
+                });
+            });
 
-            $("#kolegijForm").submit(function (e) {
-                // prevent refresh on button click
-                e.preventDefault();
+            // ==================================== on datalist selection =============================================
 
-                alert($.get("http://www.fulek.com/VUA/SUPIT/GetNastavniPlan"));
-                if (noTableRows()) {
-                    $(".table thead").append(table_header);
+            $("#nazivKolegija").bind('select', function (e) {
+                // add header if there are no previous table data
+                if (counter == 0) {
+                    $(".table thead").append(`
+                    <tr>
+                        <th scope="col">Kolegij</th>
+                        <th scope="col">ECTS</th>
+                        <th scope="col">Sati</th>
+                        <th scope="col">P</th>
+                        <th scope="col">V</th>
+                        <th scope="col">Tip</th>
+                        <th scope="col"></th>
+                    </tr>
+                    `);
                 }
-                
+
                 // adding table data
                 const kolegij = $("#nazivKolegija").val();
                 const table_row = `
@@ -184,18 +183,20 @@
                     </tr>
                     `;
                 $(".table tbody").append(table_row);
-                
+
                 // iterate counter, erase data from input text
                 ++counter;
                 $("#nazivKolegija").val('');
             });
+
+            // ==================================== on delete button click =============================================
 
             $("body").on("click", ".btn-danger", function () {
                 $(this).parents("tr").remove();
                 --counter;
 
                 // remove table header if there are no table data
-                if (noTableRows()) {
+                if (counter == 0) {
                     $("table > thead tr").remove();
                 }
             });
