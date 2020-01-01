@@ -1,0 +1,27 @@
+@import url("../animations.css");
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 4.5em; 
+}
+
+/* -------------- Novosti title section -------------- */
+
+#nastavni-plan-container {
+    text-align: center;
+    margin-top: 1.25em;
+    margin-bottom: 3.5em;
+
+    -moz-animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
+    -webkit-animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
+    animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
+}
+
+div#nastavni-plan-container > div > div > p {
+    border-bottom: 0.25em solid #FFA500;
+}
+
+div#nastavni-plan-container > div > div > h1 {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
