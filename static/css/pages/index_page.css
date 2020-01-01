@@ -4,7 +4,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Container holding the image and the video */
 .container-custom {
     position: relative;
 
@@ -42,7 +41,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Centered text */
 .centered {
     position: absolute;
     top: 50%;
