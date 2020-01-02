@@ -1,33 +1,22 @@
 $(document).ready(function () {
-    // variable declaration
     let counter = 0;
     let ects = 0;
     let sati = 0;
     let sviKolegiji = [];
 
-    // ==================================== get table data on page load =============================================
+    // =============================== fill up datalist on page load ========================================
 
-    // fill up datalist
-    $.get("http://www.fulek.com/VUA/SUPIT/GetNastavniPlan", function (kolegijiArray) {
-        kolegijiArray.forEach(kolegij => {
+    // fill up datalist and array
+    $.get("http://www.fulek.com/VUA/SUPIT/GetNastavniPlan", function (result) {
+        result.forEach(kolegij => {
             $('#sviKolegiji').append("<option value='" + kolegij.label + "'>");
         });
+        sviKolegiji = result;
     });
 
-    // get all data about each kolegij
-    for (let i = 1; i <= 40; i++) {
-        $.get(`http://www.fulek.com/VUA/supit/GetKolegij/${i}`, function (kolegij) {
-            sviKolegiji.push(kolegij)
-        });
-    }
+    // ============================ on one datalist option selection ========================================
 
-    // ==================================== on datalist selection =============================================
-
-    $(document).on('input', '#nazivKolegija', function () {
-        // getting data for entered kolegij
-        const kolegij = $("#nazivKolegija").val();
-        kolegijData = sviKolegiji.filter(element => element.kolegij == kolegij);
-
+    $(document).on('change', '#nazivKolegija', function () {
         // add header and footer if there are no previous table data
         if (counter == 0) {
             $(".table thead").append(`
@@ -43,35 +32,60 @@ $(document).ready(function () {
             `);
         }
 
-        $(".table tbody").append(`
-        <tr>
-            <td>${kolegijData[0].kolegij}</td>
-            <td>${kolegijData[0].ects}</td>
-            <td>${kolegijData[0].sati}</td>
-            <td>${kolegijData[0].predavanja}</td>
-            <td>${kolegijData[0].vjezbe}</td>
-            <td>${kolegijData[0].tip}</td>
-            <td class="border-0"><input class="btn btn-danger btn-sm" type="submit" value="Obriši"></td>
-        </tr>
-        `);
+        // read entered kolegij from input field
+        kolegij = $("#nazivKolegija").val();
+        requestedKolegij = sviKolegiji.filter(data => data.label == kolegij);
 
-        $(".table tfoot").html(`
-        <tr>
-            <th>Ukupno</th>
-            <td>${ects += kolegijData[0].ects}</td>
-            <td>${sati += kolegijData[0].sati}</td>
-        </tr>
-        `);
+        // get all kolegij data from entered name of kolegij and add table data
+        try {
+            // GET request
+            $.get(`http://www.fulek.com/VUA/supit/GetKolegij/${requestedKolegij[0].value}`, function (kolegijData, status) {
+                if (status != "success") {
+                    console.log(status);
+                    alert("Došlo je do pogreške. Molim probajte još jednom.");
+                }
+                
+                // add table row
+                $(".table tbody").append(`
+                <tr>
+                    <td>${kolegijData.kolegij}</td>
+                    <td>${kolegijData.ects}</td>
+                    <td>${kolegijData.sati}</td>
+                    <td>${kolegijData.predavanja}</td>
+                    <td>${kolegijData.vjezbe}</td>
+                    <td>${kolegijData.tip}</td>
+                    <td><input class="btn btn-danger btn-sm" type="submit" value="Obriši"></td>
+                </tr>
+                `);
 
-        ++counter;
-        $("#nazivKolegija").val('');
+                // update table footer values
+                $(".table tfoot").html(`
+                <tr>
+                    <th>Ukupno</th>
+                    <td>${ects += kolegijData.ects}</td>
+                    <td>${sati += kolegijData.sati}</td>
+                </tr>
+                `);
+            });
+
+        } catch (e) {
+            console.log(e);
+            alert("Obrišite sve iz input polja i probajte još jednom.");
+        }
+
+        finally {
+            ++counter;
+            $("#nazivKolegija").val('');
+        }
     });
 
-    // ==================================== on delete button click =============================================
+    // ==================================== on delete button click ============================================
 
     $("body").on("click", ".btn-danger", function () {
-        deletedRow = $(this).parents("tr").remove().text().split("\n");
+        --counter;
 
+        // delete row, get values of deleted row and update table footer values
+        deletedRow = $(this).parents("tr").remove().text().split("\n");
         $(".table tfoot").html(`
         <tr>
             <th>Ukupno</th>
@@ -79,8 +93,6 @@ $(document).ready(function () {
             <td>${sati -= deletedRow[3]}</td>
         </tr>
         `);
-
-        --counter;
 
         // remove table header and footer if there are no table data
         if (counter == 0) {
