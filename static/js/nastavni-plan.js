@@ -22,21 +22,6 @@ $(document).ready(function () {
         requestedKolegij = sviKolegiji.filter(data => data.label == kolegij);
 
         try {
-            // add header and footer if there are no previous table data
-            if (counter == 0) {
-                $(".table thead").append(`
-                    <tr>
-                        <th scope="col">Kolegij</th>
-                        <th scope="col">ECTS</th>
-                        <th scope="col">Sati</th>
-                        <th scope="col">P</th>
-                        <th scope="col">V</th>
-                        <th scope="col">Tip</th>
-                        <th scope="col"></th>
-                    </tr>
-                    `);
-            }
-
             // GET request
             $.get(`http://www.fulek.com/VUA/supit/GetKolegij/${requestedKolegij[0].value}`, function (kolegijData, status) {
                 if (status != "success") {
@@ -66,6 +51,21 @@ $(document).ready(function () {
                 </tr>
                 `);
             });
+
+            // add header and footer if there are no previous table data
+            if (counter == 0) {
+                $(".table thead").append(`
+                    <tr>
+                        <th scope="col">Kolegij</th>
+                        <th scope="col">ECTS</th>
+                        <th scope="col">Sati</th>
+                        <th scope="col">P</th>
+                        <th scope="col">V</th>
+                        <th scope="col">Tip</th>
+                        <th scope="col"></th>
+                    </tr>
+                    `);
+            }
 
         } catch (e) {
             console.log(e);
