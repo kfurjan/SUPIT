@@ -2,6 +2,7 @@
 .vscode
 .idea
 .git
+.jshintrc
 *workspace
 *log
 node_modules/
