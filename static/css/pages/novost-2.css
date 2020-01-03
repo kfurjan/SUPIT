@@ -98,6 +98,8 @@ div#novosti-container > div > div > h1 {
 
 @media only screen and (max-width: 576px) {
     .centered {
+        height: auto;
+        width: 75%;
         position: absolute;
         top: 50%;
         left: 50%;

@@ -1,4 +1,4 @@
-$("container-fluid").ready(() => {
+$("container-fluid container-custom").ready(() => {
     let counter = 0;
     let ects = 0;
     let sati = 0;
