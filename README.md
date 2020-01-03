@@ -13,4 +13,4 @@ Izrada web stranice prema specifikaciji za kolegij *Standardi u primjeni interne
 2. cd SUPIT/
 3. sudo npm install
 3. npm run build
-4. pokreni web stranicu na nekom od web servera (npr: [VS Code Live server ekstenzija](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
+4. pokreni web stranicu na nekom od web servera (npr: [VS Code Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
