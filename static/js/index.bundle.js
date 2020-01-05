@@ -1051,27 +1051,19 @@ return /******/ (function(modules) { // webpackBootstrap
 });
 ;
 },{}],2:[function(require,module,exports){
-const { startTypedAnimation } = require('./main');
+const Typed = require('typed.js');
 
-document.getElementsByClassName('.typed-row').innerHTML = startTypedAnimation();
-},{"./main":3}],3:[function(require,module,exports){
-const Typed = require('typed.js')
-
-const startTypedAnimation = () => {
-    window.addEventListener('load', () => {
-        new Typed('.typed-row', {
-            strings: [
-                'Budi izvrstan u onom što vidiš!',
-                'Budi izvrstan u onom što voliš.',
-                'Budi izvrstan u onom što voliš.<br><strong style="color: darkred">ZAISKRI</strong>.'
-            ],
-            startDelay: 100,
-            typeSpeed: 100,
-            backDelay: 1000,
-            contentType: 'html'
-        });
+$("body").ready(() => {
+    new Typed('.typed-row', {
+        strings: [
+            'Budi izvrstan u onom što vidiš!',
+            'Budi izvrstan u onom što voliš.',
+            'Budi izvrstan u onom što voliš.<br><strong style="color: darkred">ZAISKRI</strong>.'
+        ],
+        startDelay: 100,
+        typeSpeed: 100,
+        backDelay: 1000,
+        contentType: 'html'
     });
-}
-
-exports.startTypedAnimation = startTypedAnimation;
+});
 },{"typed.js":1}]},{},[2]);
