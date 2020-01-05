@@ -1,3 +1,3 @@
 $(document).ready(() => {
-    $(".modal-content").load('../../pages/template.html #modal-template');
+    $(".modal-content").load('../pages/template.html #modal-template');
 })
