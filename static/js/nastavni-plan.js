@@ -1,7 +1,7 @@
 const getAlertOnEveryKolegijLoad = () => {
   $("#every-kolegij-load-alert").html(`
         <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-            <strong>Nemoguće dohvatiti sve kolegije!</strong> Molim probajte još jednom.
+            <strong>Nemoguće dohvatiti podatke o svim kolegijima!</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -12,7 +12,7 @@ const getAlertOnEveryKolegijLoad = () => {
 const getAlertOnKolegijLoad = () => {
   $("#kolegij-alert").html(`
         <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-            <strong>Nemoguće dohvatiti podatke o kolegiju!</strong> Molim probajte još jednom.
+            <strong>Nemoguće dohvatiti podatke o traženom kolegiju!</strong> Provjerite unos i probajte još jednom.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -20,7 +20,7 @@ const getAlertOnKolegijLoad = () => {
     `);
 };
 
-$("container-fluid container-custom").ready(() => {
+$(document).ready(() => {
   let counter = 0;
   let ects = 0;
   let sati = 0;
@@ -45,7 +45,9 @@ $("container-fluid container-custom").ready(() => {
 
     try {
       $.get(
-        `http://www.fulek.com/VUA/supit/GetKolegij/${kolegijArr.find(kolegijObj => kolegijObj.label == kolegij).value}`, kolegij => {
+        `http://www.fulek.com/VUA/supit/GetKolegij/
+        ${kolegijArr.find(kolegijObj => kolegijObj.label == kolegij).value}`,
+        kolegij => {
           // add table row
           $(".table tbody").append(`
                     <tr>
@@ -87,15 +89,14 @@ $("container-fluid container-custom").ready(() => {
       ).fail(() => {
         getAlertOnKolegijLoad();
       });
-
+    
     } catch (e) {
       console.error(e.name, e.message);
       getAlertOnKolegijLoad();
-
+    
     } finally {
       $("#nazivKolegija").val("");
     }
-
   });
 
   // ==================================== on delete button click ============================================
@@ -104,12 +105,9 @@ $("container-fluid container-custom").ready(() => {
     --counter;
 
     // delete row, get values of deleted row and update table footer values
-    deletedRowValues = $(this)
-      .parents("tr")
-      .remove()
-      .text()
-      .split("\n");
-    $(".table tfoot").html(`
+    deletedRowValues = $(this).parents("tr").remove().text().split("\n");
+    
+      $(".table tfoot").html(`
             <tr>
                 <th>Ukupno</th>
                 <td>${(ects -= deletedRowValues[2])}</td>
