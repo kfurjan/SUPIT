@@ -1,21 +1,21 @@
 #navbar {
-    background-color: black;
-    font-size: medium;
+  background-color: black;
+  font-size: medium;
 }
 
 #algebra-logo {
-    transform: scale(0.75);
-    margin: -10px;
+  transform: scale(0.75);
+  margin: -10px;
 }
 
-#navbar-links > li > a{
-    color: white;
+#navbar-links > li > a {
+  color: white;
 }
 
-#navbar-links > li > a:hover{
-    color: yellow;
+#navbar-links > li > a:hover {
+  color: yellow;
 }
 
 #navbar-icon {
-    color: orange;
+  color: orange;
 }
