@@ -1,59 +1,73 @@
 @import url("../animations.css");
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 4.5em; 
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 4.5em;
 }
 
 /* -------------- Novosti title section -------------- */
 
 #novosti-container {
-    text-align: center;
-    margin-top: 1.25em;
-    margin-bottom: 3.5em;
+  text-align: center;
+  margin-top: 1.25em;
+  margin-bottom: 3.5em;
 
-    -moz-animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
-    -webkit-animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
-    animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
+  -moz-animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
+  -webkit-animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
+  animation: 0.75s ease-in 0s 1 slideInFromBottom forwards;
 }
 
 div#novosti-container > div > div > p {
-    border-bottom: 0.25em solid #FFA500;
+  border-bottom: 0.25em solid #ffa500;
 }
 
 div#novosti-container > div > div > h1 {
-    margin-bottom: 0.5em;
-    font-weight: bold;
+  margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
 /* -------------- Title image section -------------- */
 
 .img-container {
-    max-height: 20em;
+  max-height: 20em;
 }
 
 .novost-img-container {
-    max-height: 20em;
-    
-    overflow: hidden;
-    overflow: -moz-hidden-unscrollable;
+  max-height: 20em;
 
-    -moz-animation: 1s ease-in 0s 1 slideInFromTop forwards;
-    -webkit-animation: 1s ease-in 0s 1 slideInFromTop forwards;
-    animation: 1s ease-in 0s 1 slideInFromTop forwards;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+
+  -moz-animation: 1s ease-in 0s 1 slideInFromTop forwards;
+  -webkit-animation: 1s ease-in 0s 1 slideInFromTop forwards;
+  animation: 1s ease-in 0s 1 slideInFromTop forwards;
 }
 
 .responsive-image {
-    height: auto;
-    width: 105%;
-    
-    position: relative;
-    left: 50%;
-    
-    transform: translate(-50%, 0%);
+  height: auto;
+  width: 105%;
+
+  position: relative;
+  left: 50%;
+
+  transform: translate(-50%, 0%);
 }
 
 .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-weight: bold;
+  font-size: 250%;
+  text-shadow: 2px 2px black;
+}
+
+@media (min-width: 768.02px) and (max-width: 1200px) {
+  .centered {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -62,143 +76,129 @@ div#novosti-container > div > div > h1 {
 
     color: white;
     font-weight: bold;
-    font-size: 250%;
+    font-size: 200%;
     text-shadow: 2px 2px black;
-}
-
-@media (min-width: 768.02px) and (max-width: 1200px) {
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    
-        transform: translate(-50%, -50%);
-    
-        color: white;
-        font-weight: bold;
-        font-size: 200%;
-        text-shadow: 2px 2px black;
-    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    
-        transform: translate(-50%, -50%);
-    
-        color: white;
-        font-weight: bold;
-        font-size: 150%;
-        text-shadow: 2px 2px black;
-    }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+    text-shadow: 2px 2px black;
+  }
 }
 
 @media only screen and (max-width: 576px) {
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    
-        transform: translate(-50%, -50%);
-    
-        color: white;
-        font-weight: bold;
-        font-size: 100%;
-        text-shadow: 2px 2px black;
-    }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-weight: bold;
+    font-size: 100%;
+    text-shadow: 2px 2px black;
+  }
 }
 
 /* -------------- Novost text with images / video section -------------- */
 
 .novost-text {
-    font-size: large;
-    font-weight: 600;
+  font-size: large;
+  font-weight: 600;
 }
 
 .inner {
-    overflow: hidden;
-    border-radius: 5px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 .inner {
-    transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .inner img {
-    transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .inner:hover {
-    box-shadow: 0px 0px 6px 8px lightgray;
+  box-shadow: 0px 0px 6px 8px lightgray;
 }
 
 .inner:hover img {
-    transform: scale(1.2);
-    opacity: 1;
+  transform: scale(1.2);
+  opacity: 1;
 }
 
 .img-fluid {
-    opacity: 0.75;
-    border-radius: 5px;
+  opacity: 0.75;
+  border-radius: 5px;
 }
 
 .ekko-lightbox .modal-body {
-    padding: 0px;
+  padding: 0px;
 }
 
-.ekko-lightbox .img-fluid{
-    opacity: 1;
+.ekko-lightbox .img-fluid {
+  opacity: 1;
 }
 
 /* -------------- Footer section -------------- */
 
 .footer {
+  position: relative;
+
+  width: 100%;
+  height: 15em;
+
+  background-image: url("../../img/zaiskri-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+}
+
+.footer > h1:nth-of-type(1) {
+  color: white;
+}
+
+.footer > h1:nth-of-type(2) {
+  color: darkred;
+}
+
+.text-center {
+  text-transform: uppercase;
+  font-weight: bolder;
+
+  text-shadow: 2px 2px black;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
     position: relative;
 
     width: 100%;
     height: 15em;
-    
+
     background-image: url("../../img/zaiskri-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     text-align: center;
+  }
+
+  .footer > h1:nth-of-type(1) {
+    font-size: 120%;
+  }
 }
-
-.footer > h1:nth-of-type(1) {
-    color: white;
-}
-
-.footer > h1:nth-of-type(2) {
-    color: darkred;
-}
-
-.text-center {
-    text-transform: uppercase;
-    font-weight: bolder;
-
-    text-shadow: 2px 2px black;
-}
-
-@media only screen and (max-width: 768px) {
-    .footer {
-        position: relative;
-    
-        width: 100%;
-        height: 15em;
-        
-        background-image: url("../../img/zaiskri-bg.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        text-align: center;
-    }
-
-    .footer > h1:nth-of-type(1) {
-        font-size: 120%;      
-    }
-} 

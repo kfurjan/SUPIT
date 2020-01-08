@@ -1,281 +1,280 @@
 @import url("../animations.css");
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 4em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 4em;
 }
-
 
 /* -------------- Navbar -------------- */
 
 #page-links > li > a {
-    color: #FFA500;
-    display: inline-block;
-    
-    min-width: 6.5em;
-    text-align: center;
-    
-    -moz-animation: 1s ease-in 1.25s 1 slideInFromRight both;
-    -webkit-animation: 1s ease-in 1.25s 1 slideInFromRight both;
-    animation: 1s ease-in 1s 1.25s slideInFromRight both;
+  color: #ffa500;
+  display: inline-block;
+
+  min-width: 6.5em;
+  text-align: center;
+
+  -moz-animation: 1s ease-in 1.25s 1 slideInFromRight both;
+  -webkit-animation: 1s ease-in 1.25s 1 slideInFromRight both;
+  animation: 1s ease-in 1s 1.25s slideInFromRight both;
 }
 
 #page-links > li > a:hover {
-    color: yellow;
+  color: yellow;
 }
 
 /* -------------- Campus image section -------------- */
 
 .img-container {
-    max-height: 20em;
+  max-height: 20em;
 }
 
 .kampus-img-container {
-    max-height: 20em;
-    
-    overflow: hidden;
-    overflow: -moz-hidden-unscrollable;
+  max-height: 20em;
 
-    -moz-animation: 1s ease-in 0s 1 slideInFromTop forwards;
-    -webkit-animation: 1s ease-in 0s 1 slideInFromTop forwards;
-    animation: 1s ease-in 0s 1 slideInFromTop forwards;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+
+  -moz-animation: 1s ease-in 0s 1 slideInFromTop forwards;
+  -webkit-animation: 1s ease-in 0s 1 slideInFromTop forwards;
+  animation: 1s ease-in 0s 1 slideInFromTop forwards;
 }
 
 .responsive-image {
-    height: auto;
-    width: 100%;
-    
-    position: relative;
-    left: 50%;
-    
-    transform: translate(-50%, -30%);
+  height: auto;
+  width: 100%;
+
+  position: relative;
+  left: 50%;
+
+  transform: translate(-50%, -30%);
 }
 
 /* -------------- O nama section -------------- */
 
 #o-nama-container {
-    text-align: center;
-    margin-top: 1.25em;
+  text-align: center;
+  margin-top: 1.25em;
 
-    -moz-animation: 1s ease-in 0s 1 slideInFromBottom forwards;
-    -webkit-animation: 1s ease-in 0s 1 slideInFromBottom forwards;
-    animation: 1s ease-in 0s 1 slideInFromBottom forwards;
+  -moz-animation: 1s ease-in 0s 1 slideInFromBottom forwards;
+  -webkit-animation: 1s ease-in 0s 1 slideInFromBottom forwards;
+  animation: 1s ease-in 0s 1 slideInFromBottom forwards;
 }
 
 div#o-nama-container > div > div > p {
-    border-bottom: 0.25em solid #FFA500;
+  border-bottom: 0.25em solid #ffa500;
 }
 
 div#o-nama-container > div > div > h1 {
-    margin-bottom: 0.5em;
-    font-weight: bold;
+  margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
 /* -------------- Nase vrijednosti section -------------- */
 
 #nase-vrijednosti > h2 {
-    margin-top: 3em;
-    
-    text-align: center;
-    font-weight: bold;
-    color: darkred;
+  margin-top: 3em;
 
-    -moz-animation: 2s ease-in 0s 1 opacityAnimation forwards;
-    -webkit-animation: 2s ease-in 0s 1 opacityAnimation forwards;
-    animation: 2s ease-in 0s 1 opacityAnimation forwards;
+  text-align: center;
+  font-weight: bold;
+  color: darkred;
+
+  -moz-animation: 2s ease-in 0s 1 opacityAnimation forwards;
+  -webkit-animation: 2s ease-in 0s 1 opacityAnimation forwards;
+  animation: 2s ease-in 0s 1 opacityAnimation forwards;
 }
 
 #nase-vrijednosti > div:nth-of-type(1) {
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 2em;
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 2em;
 
-    background-color: #FBFBFB;
+  background-color: #fbfbfb;
 
-    -moz-animation: 2s ease-in 0s 1 opacityAnimation forwards;
-    -webkit-animation: 2s ease-in 0s 1 opacityAnimation forwards;
-    animation: 2s ease-in 0s 1 opacityAnimation forwards;
+  -moz-animation: 2s ease-in 0s 1 opacityAnimation forwards;
+  -webkit-animation: 2s ease-in 0s 1 opacityAnimation forwards;
+  animation: 2s ease-in 0s 1 opacityAnimation forwards;
 }
 
 .cursive-text {
-    display: inline-block;
-    
-    margin-top: 4em;
-    margin-bottom: 4em;
-    
-    font-weight: 100;
-    font-size: x-large;
-    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
-    font-style: oblique;
-    color: gray;
+  display: inline-block;
+
+  margin-top: 4em;
+  margin-bottom: 4em;
+
+  font-weight: 100;
+  font-size: x-large;
+  font-family: "Brush Script MT", "Brush Script Std", cursive;
+  font-style: oblique;
+  color: gray;
 }
 
 .card {
-    width: 150%;
+  width: 150%;
 }
 
 .card-text {
-    text-align: justify;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 100;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
 }
 
 .card-title {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* -------------- Povijest section -------------- */
 
 #povijest > h2 {
-    margin-top: 3em;
-    
-    text-align: center;
-    font-weight: bold;
-    color: darkred;
+  margin-top: 3em;
+
+  text-align: center;
+  font-weight: bold;
+  color: darkred;
 }
 
 #povijest > div:nth-of-type(1) {
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 2em;
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 2em;
 
-    background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .numbers {
-    color: darkblue;
+  color: darkblue;
 }
 
 /* -------------- Algebra grupa section -------------- */
 
 #algebra-grupa > h2 {
-    margin-top: 3em;
-    
-    text-align: center;
-    font-weight: bold;
-    color: darkred;
+  margin-top: 3em;
+
+  text-align: center;
+  font-weight: bold;
+  color: darkred;
 }
 
 #algebra-grupa > div:nth-of-type(1) {
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 2em;
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 2em;
 
-    background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .custom-card-img {
-    height: auto; 
-    width: auto; 
-    max-width: 100px; 
-    max-height: 100px;
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .custom-card-img-2 {
-    height: auto; 
-    width: auto; 
-    max-width: 250px; 
-    max-height: 250px;
+  height: auto;
+  width: auto;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .custom-card-img-row-2 {
-    height: auto; 
-    width: auto; 
-    max-width: 200px; 
-    max-height: 200px;
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .custom-card-title {
-    font-size: 0.75em;
-    font-weight: bold;
-    text-align: justify;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-align: justify;
 }
 
 /* -------------- Kako do nas section -------------- */
 
 #kako-do-nas > h2 {
-    margin-top: 3em;
-    margin-bottom: 2em;
-    
-    text-align: center;
-    font-weight: bold;
-    color: darkred;
+  margin-top: 3em;
+  margin-bottom: 2em;
+
+  text-align: center;
+  font-weight: bold;
+  color: darkred;
 }
 
 .parallax {
-    display: block;
-    position: relative;
+  display: block;
+  position: relative;
 }
 
 .parallax::after {
-    background-image: url("../../img/kakoDoNas.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    content : "";
-    display: block;
-    position: absolute;
-    
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    opacity : 0.5;
-    z-index: -1;
-  }
+  background-image: url("../../img/kakoDoNas.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  .custom-icon-color {
-      color: darkblue;
-  }
+  content: "";
+  display: block;
+  position: absolute;
 
-  .kako-do-nas-text {
-      text-align: justify;
-  }
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-  .gmaps {
-      height: 25em;
-  }
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.custom-icon-color {
+  color: darkblue;
+}
+
+.kako-do-nas-text {
+  text-align: justify;
+}
+
+.gmaps {
+  height: 25em;
+}
 
 /* -------------- Footer section -------------- */
 
- .footer {
-    position: relative;
+.footer {
+  position: relative;
 
-    width: 100%;
-    height: 15em;
-    
-    background-image: url("../../img/zaiskri-bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    text-align: center;
+  width: 100%;
+  height: 15em;
+
+  background-image: url("../../img/zaiskri-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
 }
 
 .footer > h1:nth-of-type(1) {
-    color: white;
+  color: white;
 }
 
 .footer > h1:nth-of-type(2) {
-    color: darkred;
+  color: darkred;
 }
 
 .text-center {
-    text-transform: uppercase;
-    font-weight: bolder;
+  text-transform: uppercase;
+  font-weight: bolder;
 
-    text-shadow: 2px 2px black;
+  text-shadow: 2px 2px black;
 }
 
 @media only screen and (max-width: 720px) {
-    .footer > h1:nth-of-type(1) {
-        font-size: 120%;      
-    }
-} 
+  .footer > h1:nth-of-type(1) {
+    font-size: 120%;
+  }
+}
