@@ -1,23 +1,23 @@
 const getAlertOnEveryKolegijLoad = () => {
   $("#every-kolegij-load-alert").html(`
-        <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-            <strong>Nemoguće dohvatiti podatke o svim kolegijima!</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    `);
+    <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+        <strong>Nemoguće dohvatiti podatke o svim kolegijima!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+  `);
 };
 
 const getAlertOnKolegijLoad = () => {
   $("#kolegij-alert").html(`
-        <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-            <strong>Nemoguće dohvatiti podatke o traženom kolegiju!</strong> Provjerite unos i probajte još jednom.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    `);
+    <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+        <strong>Nemoguće dohvatiti podatke o traženom kolegiju!</strong> Provjerite unos i pokušajte još jednom.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+  `);
 };
 
 $(document).ready(() => {
@@ -50,39 +50,39 @@ $(document).ready(() => {
         kolegij => {
           // add table row
           $(".table tbody").append(`
-                    <tr>
-                        <td>${kolegij.kolegij}</td>
-                        <td>${kolegij.ects}</td>
-                        <td>${kolegij.sati}</td>
-                        <td>${kolegij.predavanja}</td>
-                        <td>${kolegij.vjezbe}</td>
-                        <td>${kolegij.tip}</td>
-                        <td><input class="btn btn-danger btn-sm" type="submit" value="Obriši"></td>
-                    </tr>
-                    `);
+            <tr>
+                <td>${kolegij.kolegij}</td>
+                <td>${kolegij.ects}</td>
+                <td>${kolegij.sati}</td>
+                <td>${kolegij.predavanja}</td>
+                <td>${kolegij.vjezbe}</td>
+                <td>${kolegij.tip}</td>
+                <td><input class="btn btn-danger btn-sm" type="submit" value="Obriši"></td>
+            </tr>
+          `);
 
           // update table footer values
           $(".table tfoot").html(`
-                    <tr>
-                        <th>Ukupno</th>
-                        <td>${(ects += kolegij.ects)}</td>
-                        <td>${(sati += kolegij.sati)}</td>
-                    </tr>
-                    `);
+            <tr>
+                <th>Ukupno</th>
+                <td>${(ects += kolegij.ects)}</td>
+                <td>${(sati += kolegij.sati)}</td>
+            </tr>
+          `);
 
           // add header if there are no previous table data
           if (counter === 0) {
             $(".table thead").append(`
-                    <tr>
-                        <th scope="col">Kolegij</th>
-                        <th scope="col">ECTS</th>
-                        <th scope="col">Sati</th>
-                        <th scope="col">P</th>
-                        <th scope="col">V</th>
-                        <th scope="col">Tip</th>
-                        <th scope="col"></th>
-                    </tr>
-                    `);
+              <tr>
+                  <th scope="col">Kolegij</th>
+                  <th scope="col">ECTS</th>
+                  <th scope="col">Sati</th>
+                  <th scope="col">P</th>
+                  <th scope="col">V</th>
+                  <th scope="col">Tip</th>
+                  <th scope="col"></th>
+              </tr>
+            `);
           }
           ++counter;
         }
@@ -107,13 +107,13 @@ $(document).ready(() => {
     // delete row, get values of deleted row and update table footer values
     deletedRowValues = $(this).parents("tr").remove().text().split("\n");
     
-      $(".table tfoot").html(`
-            <tr>
-                <th>Ukupno</th>
-                <td>${(ects -= deletedRowValues[2])}</td>
-                <td>${(sati -= deletedRowValues[3])}</td>
-            </tr>
-            `);
+    $(".table tfoot").html(`
+      <tr>
+          <th>Ukupno</th>
+          <td>${(ects -= deletedRowValues[2])}</td>
+          <td>${(sati -= deletedRowValues[3])}</td>
+      </tr>
+    `);
 
     // remove table header and footer if there are no table data
     if (counter === 0) {

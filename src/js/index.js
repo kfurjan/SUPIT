@@ -1,6 +1,6 @@
 const Typed = require('typed.js');
 
-$("body").ready(() => {
+$(document).ready(() => {
     new Typed('.typed-row', {
         strings: [
             'Budi izvrstan u onom što vidiš!',
