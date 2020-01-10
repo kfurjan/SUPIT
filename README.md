@@ -3,14 +3,15 @@ Izrada web stranice prema specifikaciji za kolegij *Standardi u primjeni interne
 
 
 # Koraci za lokalno pokretanje (UNIX/Linux):
-## Predinstalirano:
-```
+### Predinstalirano:
+
 - Node.js
 - npm package manager
-```
+- [http-server package](https://www.npmjs.com/package/http-server)
 
+### Terminal:
 1. git clone 
 2. cd SUPIT/
 3. sudo npm install
 3. npm run build
-4. pokreni web stranicu na nekom od web servera (npr: [VS Code Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
+4. http-server -o ./ --silent
