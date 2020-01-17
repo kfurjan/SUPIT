@@ -9,7 +9,7 @@ const getAlertOnEveryKolegijLoad = () => {
   `);
 };
 
-const getAlertOnKolegijLoad = () => {
+const getAlertOnKolegijFetch = () => {
   $("#kolegij-alert").html(`
     <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
         <strong>Nemoguće dohvatiti podatke o traženom kolegiju!</strong> Provjerite unos i pokušajte još jednom.
@@ -20,7 +20,7 @@ const getAlertOnKolegijLoad = () => {
   `);
 };
 
-$(document).ready(() => {
+$(() => {
   let counter = 0;
   let ects = 0;
   let sati = 0;
@@ -87,13 +87,11 @@ $(document).ready(() => {
           ++counter;
         }
       ).fail(() => {
-        getAlertOnKolegijLoad();
+        getAlertOnKolegijFetch();
       });
-    
     } catch (e) {
       console.error(e.name, e.message);
-      getAlertOnKolegijLoad();
-    
+      getAlertOnKolegijFetch();
     } finally {
       $("#nazivKolegija").val("");
     }
@@ -105,8 +103,12 @@ $(document).ready(() => {
     --counter;
 
     // delete row, get values of deleted row and update table footer values
-    deletedRowValues = $(this).parents("tr").remove().text().split("\n");
-    
+    deletedRowValues = $(this)
+      .parents("tr")
+      .remove()
+      .text()
+      .split("\n");
+
     $(".table tfoot").html(`
       <tr>
           <th>Ukupno</th>

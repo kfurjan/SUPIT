@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(() => {
   $(".modal-content").load("./template.html #modal-template");
 
   window.location.pathname.split("/").pop() === "o_nama.html"
