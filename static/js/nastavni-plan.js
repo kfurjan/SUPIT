@@ -36,7 +36,7 @@ $(() => {
 
   // =============================== fill up datalist on page load ========================================
 
-  $.get("http://www.fulek.com/VUA/SUPIT/GetNastavniPla", result => {
+  $.get("http://www.fulek.com/VUA/SUPIT/GetNastavniPlan", result => {
     result.forEach(kolegij => {
       $("#sviKolegiji").append(`<option value="${kolegij.label}">`);
     });
