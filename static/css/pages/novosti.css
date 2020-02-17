@@ -3,6 +3,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 5em;
+  height: 100%;
 }
 
 /* -------------- Novosti title section -------------- */
@@ -62,6 +63,9 @@ div#novosti-container > div > div > h1 {
   left: 50%;
 
   transform: translate(0.5em, -4em);
+  -ms-transform: translate(0.5em, -4em);
+  -moz-transform: translate(0.5em, -4em);
+  -webkit-transform: translate(0.5em, -4em);
 }
 
 .img-title {
@@ -85,6 +89,9 @@ div#novosti-container > div > div > h1 {
     left: 50%;
 
     transform: translate(-7.25em, -4em);
+    -ms-transform: translate(-7.25em, -4em);
+    -moz-transform: translate(-7.25em, -4em);
+    -webkit-transform: translate(-7.25em, -4em);
   }
 
   .img-title {
