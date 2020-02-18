@@ -18,9 +18,9 @@ body {
   min-width: 6.5em;
   text-align: center;
 
-  -moz-animation: 1s ease-in 1s 1.25s slideInFromRight both;
-  -webkit-animation: 1s ease-in 1s 1.25s slideInFromRight both;
-  animation: 1s ease-in 1s 1.25s slideInFromRight both;
+  -moz-animation: 1s ease-in 1.25s 1 slideInFromRight both;
+  -webkit-animation: 1s ease-in 1.25s 1 slideInFromRight both;
+  animation: 1s ease-in 1.25s 1 slideInFromRight both;
 }
 
 #page-links > li > a:hover {
