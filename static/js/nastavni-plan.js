@@ -1,12 +1,14 @@
 const getAlertOnEveryKolegijLoad = () => {
   $("#every-kolegij-load-alert")
-    .html(`
+    .html(
+      `
     <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
         <strong>Nemoguće dohvatiti podatke o svim kolegijima!</strong>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-    </div>`)
+    </div>`
+    )
     .delay(8000)
     .queue(function() {
       $(this).remove();
@@ -15,13 +17,15 @@ const getAlertOnEveryKolegijLoad = () => {
 
 const getAlertOnKolegijFetch = () => {
   $("#kolegij-alert")
-    .html(`
+    .html(
+      `
     <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
         <strong>Nemoguće dohvatiti podatke o traženom kolegiju!</strong> Provjerite unos i pokušajte još jednom.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-    </div>`)
+    </div>`
+    )
     .delay(5000)
     .queue(function() {
       $(this).remove();
@@ -98,7 +102,11 @@ $(() => {
         getAlertOnKolegijFetch();
       });
     } catch (e) {
-      console.error(e.name, e.message);
+      console.error(
+        "Non-existant course has been entered",
+        e.name,
+        e.message
+      );
       getAlertOnKolegijFetch();
     } finally {
       $("#nazivKolegija").val("");
